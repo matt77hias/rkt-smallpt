@@ -107,7 +107,7 @@
 (define (samples args)
   (if (> (vector-length args) 1)
       (/ (vector-ref args 1) 4.0)
-      4))
+      1))
 
 (define (loop-main scene cam height width smax)
   (let ([Ls (make-vector (* width height) (vector3 0.0 0.0 0.0))])
@@ -136,7 +136,7 @@
              [L1 (mul-v3 (clamp-v3 L0 0.0 1.0) 0.25)]
              [index (+ (* (- height 1 y) width) x)])
         (begin
-             (vector-set! Ls index L1)
+             (vector-set! Ls index (add-v3 (vector-ref Ls index) L1))
              (loop-sx scene cam y height x width sy (+ sx 1) smax Ls)))))
 (define (loop-s scene cam y height x width sy sx s smax L0)
   (if (equal? s smax)
