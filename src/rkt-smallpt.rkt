@@ -67,7 +67,7 @@
                                            [ndd (normalize-v3 (add-v3 (mul-v3 (vector3->z dd) w) (add-v3 (mul-v3 (vector3->x dd) u) (mul-v3 (vector3->y dd) v))))])
                                            (list ndd 1.0))])]
                      [d (car record)]
-                     [f (mul-v3 (cadr record) (sphere->f s))]
+                     [f (mul-v3 (cadr record) (cadr rr-record))]
                      [L (radiance scene (ray p d epsilon-sphere positive-infinity (+ 1 (ray->depth r))))])
                 (add-v3 (sphere->e s) (mul-v3 f L))))))))
 
