@@ -1,3 +1,8 @@
+[![License][s1]][li]
+
+[s1]: https://img.shields.io/badge/license-MIT-blue.svg
+[li]: https://raw.githubusercontent.com/matt77hias/rkt-smallpt/master/LICENSE.txt
+
 # rkt-smallpt
 
 ## About
