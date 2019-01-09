@@ -102,7 +102,7 @@
            [args (current-command-line-arguments)]
            [smax (samples args)]
            [Ls (loop-main scene cam height width smax)])
-      (write-ppm width height (vector->list Ls) "rkt-smallpt.ppm"))))
+      (write-ppm width height (vector->list Ls) "rkt-image.ppm"))))
 
 (define (samples args)
   (if (> (vector-length args) 1)
